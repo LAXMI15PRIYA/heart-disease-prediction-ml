@@ -281,8 +281,17 @@ with right:
 
     thal = thal_dict[thal_name]
     st.divider()
+    col1, col2 = st.columns(2)
 
-if st.button("🔍 Predict Heart Disease", use_container_width=True):
+with col1:
+    predict = st.button("🔍 Predict Heart Disease", use_container_width=True)
+
+with col2:
+    if st.button("🔄 Reset", use_container_width=True):
+        st.rerun()
+
+if predict:
+
 
     patient = np.array([[
         age,
