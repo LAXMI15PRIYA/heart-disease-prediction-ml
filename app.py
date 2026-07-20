@@ -280,13 +280,11 @@ if st.button("🔍 Predict Heart Disease", use_container_width=True):
         thal
     ]])
 
-    # Scale the input
+    # Scale input
     patient_scaled = scaler.transform(patient)
 
-    # Make prediction
+    # Prediction
     prediction = model.predict(patient_scaled)
-
-    # Prediction probability
     probability = model.predict_proba(patient_scaled)
 
     low_risk = float(probability[0][0])
@@ -300,17 +298,44 @@ if st.button("🔍 Predict Heart Disease", use_container_width=True):
     else:
         st.success("💚 Low Risk of Heart Disease")
 
-    st.subheader("📈 Prediction Confidence")
+    st.subheader("📈 Prediction Probability")
 
     col1, col2 = st.columns(2)
 
     with col1:
-        st.metric("Low Risk", f"{low_risk * 100:.2f}%")
+        st.metric("Low Risk", f"{low_risk*100:.2f}%")
         st.progress(low_risk)
 
     with col2:
-        st.metric("High Risk", f"{high_risk * 100:.2f}%")
+        st.metric("High Risk", f"{high_risk*100:.2f}%")
         st.progress(high_risk)
+
+    st.divider()
+
+    st.subheader("💡 Health Recommendations")
+
+    if prediction[0] == 1:
+        st.warning("""
+### Recommendations
+
+- 🩺 Consult a cardiologist.
+- 🥗 Follow a heart-healthy diet.
+- 🚶 Exercise regularly (after medical advice).
+- 🚭 Avoid smoking and alcohol.
+- ❤️ Monitor blood pressure and cholesterol.
+- 📅 Schedule regular health checkups.
+""")
+    else:
+        st.success("""
+### Recommendations
+
+- 🥗 Maintain a healthy balanced diet.
+- 🚶 Continue regular exercise.
+- ❤️ Keep blood pressure under control.
+- 😴 Get enough sleep every day.
+- 💧 Stay hydrated.
+- 📅 Continue regular health checkups.
+""")
 
 st.divider()
 
