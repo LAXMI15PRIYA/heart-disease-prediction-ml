@@ -31,6 +31,16 @@ A complete, deployed **end-to-end Machine Learning application** that predicts a
 
 ---
 
+## 📊 Exploratory Data Analysis
+
+Correlation heatmap of all 13 features against the target variable, used to understand which factors most influence heart disease risk:
+
+![Correlation Heatmap](correlation-heatmap.png)
+
+**Key insight:** `cp` (chest pain type) and `thalach` (max heart rate) show the strongest positive correlation with heart disease risk, while `exang` (exercise-induced angina) and `oldpeak` show the strongest negative correlation — matching known clinical patterns.
+
+---
+
 ## 🎯 What This Project Demonstrates
 
 - ✅ Ability to take an ML model from **training to a live, usable product**
