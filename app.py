@@ -102,6 +102,22 @@ with st.sidebar:
         "• Joblib"
     )
 
+    st.markdown("---")
+
+st.markdown("### 🔗 Project Links")
+
+st.markdown(
+    "[GitHub Repository](https://github.com/LAXMI15PRIYA/heart-disease-prediction-ml)"
+)
+st.markdown("---")
+
+with st.expander("📈 Model Performance"):
+
+    st.write("**Model:** Logistic Regression")
+    st.write("**Preprocessing:** StandardScaler")
+    st.write("**Features:** 13")
+    st.write("**Training Accuracy:** 85.25%")
+
 # ==========================================
 # HEADER
 # ==========================================
@@ -116,6 +132,7 @@ using a trained **Machine Learning Logistic Regression model**.
 
 Please enter the patient's medical information below.
 """)
+st.info("⚠️ This application is for educational purposes only and should not replace professional medical advice.")
 
 st.divider()
 
