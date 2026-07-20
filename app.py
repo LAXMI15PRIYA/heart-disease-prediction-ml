@@ -360,3 +360,4 @@ if st.button("🔍 Predict Heart Disease", use_container_width=True):
 st.divider()
 
 st.caption("❤️ Built with Streamlit | Scikit-Learn | NumPy | Joblib")
+st.caption("👩‍💻 Developed by Lakshmi Priya")
