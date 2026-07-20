@@ -127,14 +127,6 @@ using a trained **Machine Learning Logistic Regression model**.
 Please enter the patient's medical information below.
 """)
 st.info("⚠️ This application is for educational purposes only and should not replace professional medical advice.")
-st.title("❤️ Heart Disease Prediction System")
-
-st.markdown("""
-### 🩺 AI-Powered Heart Disease Risk Assessment
-...
-""")
-
-st.info("⚠️ This application is for educational purposes only and should not replace professional medical advice.")
 
 st.markdown("---")
 
